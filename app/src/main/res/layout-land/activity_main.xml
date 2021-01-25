@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="count"
+            type="com.example.layoutcounter_assign.Count" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/toast_btn"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:insetTop="0dp"
+
+        android:insetBottom="0dp"
+        android:text="@string/toast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/count_show"
+        android:layout_width="475dp"
+        android:layout_height="325dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/background_yellow"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/count_up_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toast_btn"
+        app:layout_constraintVertical_bias="0.202" />
+
+    <Button
+        android:id="@+id/count_up_btn"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="8dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+
+        android:text="@string/count_up"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/count_down_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toast_btn" />
+
+    <Button
+        android:id="@+id/count_down_btn"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/count_down"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count_up_btn"
+        app:layout_constraintVertical_bias="0.38" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
